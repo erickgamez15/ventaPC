@@ -34,8 +34,24 @@ namespace ventaPC
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuVentas = new System.Windows.Forms.MenuStrip();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.PictureBox();
+            this.btnSave = new System.Windows.Forms.PictureBox();
+            this.textIDArticulo = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textIDCliente = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textCantidad = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBackVenta
@@ -43,7 +59,7 @@ namespace ventaPC
             this.btnBackVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(255)))), ((int)(((byte)(227)))));
             this.btnBackVenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBackVenta.Image = ((System.Drawing.Image)(resources.GetObject("btnBackVenta.Image")));
-            this.btnBackVenta.Location = new System.Drawing.Point(468, 0);
+            this.btnBackVenta.Location = new System.Drawing.Point(568, 0);
             this.btnBackVenta.Name = "btnBackVenta";
             this.btnBackVenta.Size = new System.Drawing.Size(32, 32);
             this.btnBackVenta.TabIndex = 11;
@@ -78,16 +94,134 @@ namespace ventaPC
             this.menuVentas.Location = new System.Drawing.Point(0, 0);
             this.menuVentas.Name = "menuVentas";
             this.menuVentas.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuVentas.Size = new System.Drawing.Size(500, 90);
+            this.menuVentas.Size = new System.Drawing.Size(600, 90);
             this.menuVentas.TabIndex = 8;
             this.menuVentas.Text = "menuStrip1";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 268);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(576, 150);
+            this.dataGridView1.TabIndex = 12;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textCantidad);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.textIDCliente);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.textIDArticulo);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.btnCancel);
+            this.groupBox1.Controls.Add(this.btnSave);
+            this.groupBox1.Location = new System.Drawing.Point(12, 105);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(576, 157);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(303, 102);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 18);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Cancelar";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(128, 102);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(51, 18);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Vender";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(370, 77);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(64, 64);
+            this.btnCancel.TabIndex = 14;
+            this.btnCancel.TabStop = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Location = new System.Drawing.Point(185, 77);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(64, 64);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.TabStop = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // textIDArticulo
+            // 
+            this.textIDArticulo.Location = new System.Drawing.Point(77, 32);
+            this.textIDArticulo.Name = "textIDArticulo";
+            this.textIDArticulo.Size = new System.Drawing.Size(100, 20);
+            this.textIDArticulo.TabIndex = 18;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(74, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "ID Articulo";
+            // 
+            // textIDCliente
+            // 
+            this.textIDCliente.Location = new System.Drawing.Point(239, 32);
+            this.textIDCliente.Name = "textIDCliente";
+            this.textIDCliente.Size = new System.Drawing.Size(100, 20);
+            this.textIDCliente.TabIndex = 20;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(236, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 13);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "ID Cliente";
+            // 
+            // textCantidad
+            // 
+            this.textCantidad.Location = new System.Drawing.Point(399, 32);
+            this.textCantidad.Name = "textCantidad";
+            this.textCantidad.Size = new System.Drawing.Size(100, 20);
+            this.textCantidad.TabIndex = 22;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(396, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(38, 13);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Piezas";
             // 
             // VentasAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(500, 300);
+            this.ClientSize = new System.Drawing.Size(600, 430);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnBackVenta);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -98,6 +232,11 @@ namespace ventaPC
             this.Text = "VentasAgregar";
             ((System.ComponentModel.ISupportInitialize)(this.btnBackVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,5 +248,17 @@ namespace ventaPC
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuVentas;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox btnCancel;
+        private System.Windows.Forms.PictureBox btnSave;
+        private System.Windows.Forms.TextBox textCantidad;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textIDCliente;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textIDArticulo;
+        private System.Windows.Forms.Label label8;
     }
 }
