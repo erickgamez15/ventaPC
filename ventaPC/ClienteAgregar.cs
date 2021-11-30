@@ -34,7 +34,7 @@ namespace ventaPC
 
         private void ClienteAgregar_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnSave_Click(object sender, EventArgs e)

@@ -36,22 +36,26 @@ namespace ventaPC
             this.menuVentas = new System.Windows.Forms.MenuStrip();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textCantidad = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textIDCliente = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textIDArticulo = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.PictureBox();
-            this.textIDArticulo = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textIDCliente = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textCantidad = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.btnShowProducto = new System.Windows.Forms.PictureBox();
+            this.btnShowCliente = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowProducto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBackVenta
@@ -100,6 +104,7 @@ namespace ventaPC
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 268);
             this.dataGridView1.Name = "dataGridView1";
@@ -108,6 +113,8 @@ namespace ventaPC
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnShowCliente);
+            this.groupBox1.Controls.Add(this.btnShowProducto);
             this.groupBox1.Controls.Add(this.textCantidad);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.textIDCliente);
@@ -123,6 +130,54 @@ namespace ventaPC
             this.groupBox1.Size = new System.Drawing.Size(576, 157);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
+            // 
+            // textCantidad
+            // 
+            this.textCantidad.Location = new System.Drawing.Point(404, 32);
+            this.textCantidad.Name = "textCantidad";
+            this.textCantidad.Size = new System.Drawing.Size(100, 20);
+            this.textCantidad.TabIndex = 22;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(401, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(38, 13);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Piezas";
+            // 
+            // textIDCliente
+            // 
+            this.textIDCliente.Location = new System.Drawing.Point(231, 32);
+            this.textIDCliente.Name = "textIDCliente";
+            this.textIDCliente.Size = new System.Drawing.Size(100, 20);
+            this.textIDCliente.TabIndex = 20;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(228, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 13);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "ID Cliente";
+            // 
+            // textIDArticulo
+            // 
+            this.textIDArticulo.Location = new System.Drawing.Point(60, 32);
+            this.textIDArticulo.Name = "textIDArticulo";
+            this.textIDArticulo.Size = new System.Drawing.Size(100, 20);
+            this.textIDArticulo.TabIndex = 18;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(57, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "ID Articulo";
             // 
             // label6
             // 
@@ -166,53 +221,27 @@ namespace ventaPC
             this.btnSave.TabStop = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // textIDArticulo
+            // btnShowProducto
             // 
-            this.textIDArticulo.Location = new System.Drawing.Point(77, 32);
-            this.textIDArticulo.Name = "textIDArticulo";
-            this.textIDArticulo.Size = new System.Drawing.Size(100, 20);
-            this.textIDArticulo.TabIndex = 18;
+            this.btnShowProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnShowProducto.Image")));
+            this.btnShowProducto.Location = new System.Drawing.Point(166, 20);
+            this.btnShowProducto.Name = "btnShowProducto";
+            this.btnShowProducto.Size = new System.Drawing.Size(32, 32);
+            this.btnShowProducto.TabIndex = 23;
+            this.btnShowProducto.TabStop = false;
+            this.btnShowProducto.Click += new System.EventHandler(this.btnShowProducto_Click);
             // 
-            // label8
+            // btnShowCliente
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(74, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "ID Articulo";
-            // 
-            // textIDCliente
-            // 
-            this.textIDCliente.Location = new System.Drawing.Point(239, 32);
-            this.textIDCliente.Name = "textIDCliente";
-            this.textIDCliente.Size = new System.Drawing.Size(100, 20);
-            this.textIDCliente.TabIndex = 20;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(236, 16);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 13);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "ID Cliente";
-            // 
-            // textCantidad
-            // 
-            this.textCantidad.Location = new System.Drawing.Point(399, 32);
-            this.textCantidad.Name = "textCantidad";
-            this.textCantidad.Size = new System.Drawing.Size(100, 20);
-            this.textCantidad.TabIndex = 22;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(396, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 13);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Piezas";
+            this.btnShowCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnShowCliente.Image")));
+            this.btnShowCliente.Location = new System.Drawing.Point(337, 20);
+            this.btnShowCliente.Name = "btnShowCliente";
+            this.btnShowCliente.Size = new System.Drawing.Size(32, 32);
+            this.btnShowCliente.TabIndex = 24;
+            this.btnShowCliente.TabStop = false;
+            this.btnShowCliente.Click += new System.EventHandler(this.btnShowCliente_Click);
             // 
             // VentasAgregar
             // 
@@ -237,6 +266,8 @@ namespace ventaPC
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,5 +291,7 @@ namespace ventaPC
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textIDArticulo;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox btnShowCliente;
+        private System.Windows.Forms.PictureBox btnShowProducto;
     }
 }

@@ -64,5 +64,39 @@ namespace ventaPC
             da.Fill(dt);
             return dt;
         }
+
+        private DataTable llenarGrid1()
+        {
+            Conexion.Conectar();
+            DataTable dt = new DataTable();
+            string consulta = "select * from producto where idProducto = @idProducto";
+            SqlCommand cmd = new SqlCommand(consulta, Conexion.Conectar());
+            cmd.Parameters.AddWithValue("@idProducto", textIDArticulo.Text);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
+
+        private DataTable llenarGrid2()
+        {
+            Conexion.Conectar();
+            DataTable dt = new DataTable();
+            string consulta = "select * from cliente where idCliente = @idCliente";
+            SqlCommand cmd = new SqlCommand(consulta, Conexion.Conectar());
+            cmd.Parameters.AddWithValue("@idCliente", textIDCliente.Text);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
+
+        private void btnShowProducto_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = llenarGrid1();
+        }
+
+        private void btnShowCliente_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = llenarGrid2();
+        }
     }
 }

@@ -44,7 +44,7 @@ select * from venta
 go
 -- Sentencia JOIN para venta --
 
-select idVenta, p.idProducto, c.idCliente, nombreCompleto, rfc, (cantidad*p.precioVenta) as 'Total a pagar' from venta v 
+select idVenta, p.idProducto, nombreproducto, c.idCliente, nombreCompleto, rfc, (cantidad*p.precioVenta) as 'Total a pagar' from venta v 
 inner join producto p on p.idProducto = v.idProducto
 inner join cliente c on c.idCliente = v.idCliente
 where cantidad <= stock

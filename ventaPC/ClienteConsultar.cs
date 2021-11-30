@@ -52,5 +52,27 @@ namespace ventaPC
             da.Fill(dt);
             return dt;
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = llenarGrid1();
+        }
+
+        public DataTable llenarGrid1()
+        {
+            Conexion.Conectar();
+            DataTable dt = new DataTable();
+            string consulta = "select * from cliente";
+            SqlCommand cmd = new SqlCommand(consulta, Conexion.Conectar());
+            cmd.ExecuteNonQuery();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
